@@ -4,115 +4,248 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#167346">
-  <meta name="description" content="Katalog Caraka Icons, library ikon WebP ringan untuk proyek web.">
+  <meta name="description" content="Caraka Icons adalah library ikon WebP ringan dengan CSS untuk website, PHP, CodeIgniter, Bootstrap, dan HTML.">
+  <meta name="robots" content="index,follow">
   <title>Caraka Icons — Katalog Ikon</title>
+  <link rel="icon" href="./icons/tkk-berkemah.webp" type="image/webp">
   <link rel="stylesheet" href="./caraka-icons.css">
   <style>
-    :root { color-scheme: light; --green:#167346; --ink:#18231d; --muted:#647067; --line:#e3e9e5; --bg:#f5f8f6; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
-    header { background:linear-gradient(135deg,#11643b,#23995c); color:#fff; padding:36px 20px 30px; }
-    .wrap { width:min(1100px,100% - 32px); margin:auto; }
-    h1 { margin:0 0 8px; font-size:clamp(28px,5vw,42px); letter-spacing:-.03em; }
-    header p { margin:0; max-width:720px; color:#e3f5e9; }
-    .pill { display:inline-block; margin-top:16px; padding:5px 10px; border:1px solid #ffffff66; border-radius:999px; font-size:13px; }
-    main { padding:26px 0 44px; }
-    .toolbar { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:18px; }
-    input[type=search] { flex:1 1 260px; min-width:0; border:1px solid #cfd9d2; border-radius:10px; padding:12px 14px; font:inherit; background:#fff; }
-    .count { color:var(--muted); font-size:14px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
-    .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; min-width:0; box-shadow:0 3px 12px #152a1b08; }
-    .preview { height:112px; display:flex; align-items:center; justify-content:center; border-radius:10px; background:linear-gradient(45deg,#f5f7f5 25%,transparent 25%,transparent 75%,#f5f7f5 75%),linear-gradient(45deg,#f5f7f5 25%,#fff 25%,#fff 75%,#f5f7f5 75%); background-size:16px 16px; background-position:0 0,8px 8px; }
-    .preview .ci { font-size:86px; width:1em; height:1em; }
-    .name { margin:14px 0 3px; font-weight:700; }
-    .desc { margin:0 0 12px; color:var(--muted); font-size:13px; }
-    code { overflow-wrap:anywhere; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:12px; }
-    .classline { background:#f4f7f5; padding:9px; border-radius:8px; margin-bottom:10px; }
-    button { border:0; border-radius:8px; padding:9px 12px; font:inherit; cursor:pointer; }
-    .copy { width:100%; color:white; background:var(--green); font-size:14px; }
-    .copy:hover { background:#105b36; }
-    .empty { display:none; text-align:center; color:var(--muted); padding:40px 10px; }
-    .docs { margin-top:24px; padding:20px; border:1px solid var(--line); border-radius:14px; background:#fff; }
-    .docs h2 { margin:0 0 8px; font-size:19px; }
-    .docs p { color:var(--muted); }
-    .docs pre { overflow:auto; background:#17221b; color:#e5f4e9; padding:14px; border-radius:10px; font-size:13px; }
-    footer { padding:18px 0 28px; color:var(--muted); font-size:13px; }
-    .notice { min-height:20px; color:var(--green); font-size:13px; margin-top:10px; }
+    :root {
+      color-scheme: light;
+      --green: #167346;
+      --green-dark: #105b36;
+      --ink: #18231d;
+      --muted: #647067;
+      --line: #e0e8e2;
+      --bg: #f5f8f6;
+      --surface: #fff;
+      --soft: #f1f6f2;
+      --shadow: 0 8px 28px rgb(24 35 29 / 5%);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--green); }
+    button, input { font: inherit; }
+    button:focus-visible, input:focus-visible, a:focus-visible {
+      outline: 3px solid #80c99f;
+      outline-offset: 3px;
+    }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+    .hero {
+      color: #fff;
+      background: linear-gradient(135deg, #105b36, #23995c);
+      padding: clamp(30px, 6vw, 58px) 0 34px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand-mark {
+      display: grid; place-items: center; flex: 0 0 58px; width: 58px; height: 58px;
+      border: 1px solid rgb(255 255 255 / 35%); border-radius: 16px;
+      background: rgb(255 255 255 / 12%);
+    }
+    .brand-mark .ci { width: 42px; height: 42px; }
+    h1 { margin: 0; font-size: clamp(29px, 5vw, 44px); line-height: 1.12; letter-spacing: -.035em; }
+    .hero p { max-width: 760px; margin: 14px 0 0; color: #e3f5e9; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .pill { display: inline-flex; align-items: center; border: 1px solid rgb(255 255 255 / 35%); border-radius: 999px; padding: 5px 10px; font-size: 12px; }
+    main { padding: 28px 0 48px; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    h2 { margin: 0; font-size: clamp(21px, 3vw, 27px); line-height: 1.25; }
+    .section-heading p { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .search-wrap { position: relative; flex: 1 1 280px; }
+    .search-wrap label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    input[type="search"] {
+      width: 100%; min-width: 0; border: 1px solid #cbd8ce; border-radius: 11px;
+      padding: 12px 14px; color: var(--ink); background: var(--surface);
+    }
+    input[type="search"]::placeholder { color: #78847b; }
+    .count { color: var(--muted); font-size: 14px; white-space: nowrap; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 15px; }
+    .card { min-width: 0; padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); box-shadow: var(--shadow); }
+    .preview {
+      display: flex; align-items: center; justify-content: center; height: 130px; overflow: hidden;
+      border: 1px solid #edf1ee; border-radius: 11px;
+      background-color: #fff;
+      background-image: linear-gradient(45deg, #f2f5f3 25%, transparent 25%), linear-gradient(-45deg, #f2f5f3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f2f5f3 75%), linear-gradient(-45deg, transparent 75%, #f2f5f3 75%);
+      background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+    }
+    .preview .ci { display: inline-block; width: 100px; height: 100px; font-size: 100px; }
+    .name { margin: 14px 0 3px; font-size: 16px; font-weight: 750; }
+    .desc { min-height: 40px; margin: 0 0 12px; color: var(--muted); font-size: 13px; }
+    .classline { min-height: 38px; display: flex; align-items: center; padding: 8px 10px; margin-bottom: 10px; border: 1px solid #e8eee9; border-radius: 8px; background: var(--soft); }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+    code { overflow-wrap: anywhere; font-size: 12px; }
+    .copy { width: 100%; min-height: 40px; border: 0; border-radius: 9px; padding: 9px 12px; background: var(--green); color: #fff; font-size: 14px; font-weight: 650; cursor: pointer; transition: background .15s ease; }
+    .copy:hover { background: var(--green-dark); }
+    .empty { display: none; padding: 36px 14px; text-align: center; color: var(--muted); border: 1px dashed #cbd8ce; border-radius: 12px; background: #fff; }
+    .notice { min-height: 24px; margin-top: 10px; color: var(--green); font-size: 13px; }
+    .docs { margin-top: 28px; padding: clamp(18px, 4vw, 26px); border: 1px solid var(--line); border-radius: 15px; background: var(--surface); box-shadow: var(--shadow); }
+    .docs h2 { font-size: 21px; }
+    .docs p { color: var(--muted); }
+    .docs pre { overflow: auto; margin: 12px 0; padding: 16px; border-radius: 10px; background: #17221b; color: #e5f4e9; font-size: 13px; line-height: 1.7; }
+    .docs pre code { font-size: inherit; white-space: pre; }
+    .copy-url { margin-top: 5px; }
+    .tip { padding: 12px 14px; border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; background: var(--soft); color: #35483b !important; font-size: 14px; }
+    footer { padding: 20px 0 30px; color: var(--muted); font-size: 13px; }
+    footer a { text-decoration: none; }
+    [hidden] { display: none !important; }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero { padding-top: 30px; }
+      .brand { align-items: flex-start; }
+      .brand-mark { flex-basis: 48px; width: 48px; height: 48px; border-radius: 13px; }
+      .brand-mark .ci { width: 36px; height: 36px; }
+      .toolbar { align-items: stretch; }
+      .count { padding-left: 2px; }
+      .card { padding: 13px; }
+      .preview { height: 118px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
   </style>
 </head>
 <body>
-  <header>
+  <header class="hero">
     <div class="wrap">
-      <h1>Caraka Icons</h1>
-      <p>Library ikon WebP ringan untuk website, aplikasi PHP, CodeIgniter, Bootstrap, dan proyek HTML lainnya.</p>
-      <span class="pill">WebP + CSS · GitHub Pages ready</span>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span class="ci ci-tkk-berkemah"></span></div>
+        <div>
+          <h1>Caraka Icons</h1>
+          <p>Library ikon berbasis WebP + CSS yang ringan dan mudah digunakan di website, PHP, CodeIgniter, Bootstrap, maupun HTML biasa.</p>
+        </div>
+      </div>
+      <div class="pills" aria-label="Fitur library">
+        <span class="pill">WebP + CSS</span>
+        <span class="pill">Tanpa dependensi</span>
+        <span class="pill">GitHub Pages</span>
+      </div>
     </div>
   </header>
+
   <main class="wrap">
-    <div class="toolbar">
-      <input id="search" type="search" placeholder="Cari nama ikon atau class…" aria-label="Cari ikon">
-      <span class="count" id="count">1 ikon</span>
-    </div>
-    <section class="grid" id="grid" aria-live="polite">
-      <article class="card" data-search="tkk berkemah camping pramuka ci-tkk-berkemah">
-        <div class="preview"><span class="ci ci-tkk-berkemah" role="img" aria-label="TKK Berkemah"></span></div>
-        <div class="name">TKK Berkemah</div>
-        <p class="desc">Tanda Kecakapan Khusus · Pramuka</p>
-        <div class="classline"><code>ci ci-tkk-berkemah</code></div>
-        <button class="copy" type="button" data-copy="ci ci-tkk-berkemah">Salin class ikon</button>
-      </article>
+    <section aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="catalog-title">Katalog ikon</h2>
+          <p>Cari ikon berdasarkan nama, kategori, atau class CSS.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrap">
+          <label for="search">Cari ikon</label>
+          <input id="search" type="search" placeholder="Contoh: berkemah, pramuka, ci-tkk…" autocomplete="off" spellcheck="false">
+        </div>
+        <span class="count" id="count" aria-live="polite">1 ikon</span>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="card" data-search="tkk berkemah camping kemah pramuka tanda kecakapan khusus ci-tkk-berkemah">
+          <div class="preview"><span class="ci ci-tkk-berkemah" role="img" aria-label="Lencana TKK Berkemah"></span></div>
+          <h3 class="name">TKK Berkemah</h3>
+          <p class="desc">Tanda Kecakapan Khusus · Pramuka</p>
+          <div class="classline"><code>ci ci-tkk-berkemah</code></div>
+          <button class="copy" type="button" data-copy="ci ci-tkk-berkemah">Salin class ikon</button>
+        </article>
+      </div>
+
+      <div class="empty" id="empty" role="status">Ikon tidak ditemukan. Coba kata kunci lain.</div>
+      <div class="notice" id="notice" role="status" aria-live="polite"></div>
     </section>
-    <div class="empty" id="empty">Ikon tidak ditemukan. Coba kata kunci lain.</div>
-    <div class="notice" id="notice" role="status" aria-live="polite"></div>
 
-    <section class="docs">
-      <h2>Mulai menggunakan</h2>
-      <p>Tambahkan stylesheet library ke halaman Anda, lalu gunakan class ikon.</p>
-      <pre><code>&lt;link rel="stylesheet" href="https://USERNAME.github.io/caraka-icons/caraka-icons.css"&gt;
+    <section class="docs" aria-labelledby="usage-title">
+      <h2 id="usage-title">Mulai menggunakan</h2>
+      <p>Tambahkan stylesheet Caraka Icons ke bagian <code>&lt;head&gt;</code> website Anda. Tidak perlu menyalin gambar ikon ke setiap proyek.</p>
+      <pre><code>&lt;link rel="stylesheet" href="https://carakadigitalmedia.github.io/caraka-icons/caraka-icons.css"&gt;</code></pre>
+      <p>Gunakan class ikon di HTML:</p>
+      <pre><code>&lt;i class="ci ci-tkk-berkemah" aria-label="TKK Berkemah"&gt;&lt;/i&gt;
 
-&lt;i class="ci ci-tkk-berkemah" aria-label="TKK Berkemah"&gt;&lt;/i&gt;</code></pre>
-      <p>Ganti <code>USERNAME</code> dengan nama akun GitHub Anda. Ukuran ikon mengikuti ukuran font; gunakan <code>ci-lg</code>, <code>ci-xl</code>, atau <code>ci-2x</code> untuk mengubahnya.</p>
+&lt;!-- Ukuran lebih besar --&gt;
+&lt;i class="ci ci-tkk-berkemah ci-2x" aria-label="TKK Berkemah"&gt;&lt;/i&gt;</code></pre>
+      <p class="tip">Ikon mengikuti ukuran font secara default. Gunakan <code>ci-xs</code>, <code>ci-sm</code>, <code>ci-lg</code>, <code>ci-xl</code>, <code>ci-2x</code>, atau <code>ci-3x</code> untuk mengubah ukuran.</p>
+      <h2 style="margin-top:22px">Contoh untuk CodeIgniter 3</h2>
+      <p>Pasang stylesheet satu kali di template utama, misalnya <code>application/views/templates/header.php</code>, lalu gunakan class ikon di view mana pun.</p>
+      <pre><code>&lt;link rel="stylesheet" href="https://carakadigitalmedia.github.io/caraka-icons/caraka-icons.css"&gt;
+
+&lt;a href="&lt;?= base_url('kegiatan'); ?&gt;" class="btn btn-success"&gt;
+  &lt;i class="ci ci-tkk-berkemah" aria-hidden="true"&gt;&lt;/i&gt;
+  Kegiatan Berkemah
+&lt;/a&gt;</code></pre>
+      <button class="copy copy-url" type="button" data-copy="https://carakadigitalmedia.github.io/caraka-icons/caraka-icons.css">Salin URL stylesheet</button>
     </section>
   </main>
-  <footer class="wrap">Caraka Icons · WebP + CSS · Dapat dikembangkan dengan menambahkan aset ikon dan class CSS baru.</footer>
+
+  <footer class="wrap">
+    Caraka Icons · WebP + CSS · <a href="https://github.com/carakadigitalmedia/caraka-icons">Repository GitHub</a>
+  </footer>
+
   <script>
-    const search = document.getElementById('search');
-    const cards = [...document.querySelectorAll('.card')];
-    const count = document.getElementById('count');
-    const empty = document.getElementById('empty');
-    const notice = document.getElementById('notice');
+    (() => {
+      'use strict';
+      const search = document.getElementById('search');
+      const cards = Array.from(document.querySelectorAll('.card'));
+      const count = document.getElementById('count');
+      const empty = document.getElementById('empty');
+      const notice = document.getElementById('notice');
+      let noticeTimer;
 
-    search.addEventListener('input', () => {
-      const term = search.value.trim().toLowerCase();
-      let visible = 0;
-      cards.forEach(card => {
-        const match = card.dataset.search.toLowerCase().includes(term);
-        card.hidden = !match;
-        if (match) visible++;
-      });
-      count.textContent = `${visible} dari ${cards.length} ikon`;
-      empty.style.display = visible ? 'none' : 'block';
-    });
+      function filterIcons() {
+        const term = search.value.trim().toLocaleLowerCase('id');
+        let visible = 0;
+        cards.forEach((card) => {
+          const searchable = (card.dataset.search + ' ' + card.textContent).toLocaleLowerCase('id');
+          const matches = searchable.includes(term);
+          card.hidden = !matches;
+          if (matches) visible += 1;
+        });
+        count.textContent = term ? `${visible} dari ${cards.length} ikon` : `${cards.length} ikon`;
+        empty.style.display = visible ? 'none' : 'block';
+      }
 
-    document.querySelectorAll('[data-copy]').forEach(button => {
-      button.addEventListener('click', async () => {
-        const value = button.dataset.copy;
-        try {
+      function showNotice(message) {
+        notice.textContent = message;
+        window.clearTimeout(noticeTimer);
+        noticeTimer = window.setTimeout(() => { notice.textContent = ''; }, 3500);
+      }
+
+      async function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(value);
-          notice.textContent = `Class "${value}" berhasil disalin.`;
-        } catch (error) {
-          const area = document.createElement('textarea');
-          area.value = value;
-          area.style.position = 'fixed';
-          area.style.opacity = '0';
-          document.body.appendChild(area);
-          area.select();
-          const ok = document.execCommand('copy');
-          area.remove();
-          notice.textContent = ok ? `Class "${value}" berhasil disalin.` : `Salin manual: ${value}`;
+          return true;
         }
+        const area = document.createElement('textarea');
+        area.value = value;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.left = '-9999px';
+        area.style.top = '0';
+        document.body.appendChild(area);
+        area.select();
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
+        area.remove();
+        return copied;
+      }
+
+      search.addEventListener('input', filterIcons);
+      document.querySelectorAll('[data-copy]').forEach((button) => {
+        button.addEventListener('click', async () => {
+          const value = button.dataset.copy || '';
+          try {
+            const copied = await copyText(value);
+            showNotice(copied ? `Berhasil disalin: ${value}` : `Silakan salin secara manual: ${value}`);
+          } catch (_) {
+            showNotice(`Silakan salin secara manual: ${value}`);
+          }
+        });
       });
-    });
+      filterIcons();
+    })();
   </script>
 </body>
 </html>
