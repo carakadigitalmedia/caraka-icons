@@ -17695,6 +17695,45 @@
     ]
   },
   {
+    "name": "Bantara",
+    "slug": "umum-bantara",
+    "className": "ci ci-umum-bantara",
+    "file": "icons/umum/bantara.webp",
+    "category": "Umum",
+    "keywords": [
+      "bantara",
+      "pramuka",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Mula",
+    "slug": "umum-mula",
+    "className": "ci ci-umum-mula",
+    "file": "icons/umum/mula.webp",
+    "category": "Umum",
+    "keywords": [
+      "mula",
+      "pramuka",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Pandega",
+    "slug": "umum-pandega",
+    "className": "ci ci-umum-pandega",
+    "file": "icons/umum/pandega.webp",
+    "category": "Umum",
+    "keywords": [
+      "pandega",
+      "pramuka",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
     "name": "Pg 3",
     "slug": "umum-pg-3",
     "className": "ci ci-umum-pg-3",
@@ -17745,6 +17784,83 @@
     "keywords": [
       "6",
       "pg",
+      "pramuka",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Rakit",
+    "slug": "umum-rakit",
+    "className": "ci ci-umum-rakit",
+    "file": "icons/umum/rakit.webp",
+    "category": "Umum",
+    "keywords": [
+      "pramuka",
+      "rakit",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Ramu",
+    "slug": "umum-ramu",
+    "className": "ci ci-umum-ramu",
+    "file": "icons/umum/ramu.webp",
+    "category": "Umum",
+    "keywords": [
+      "pramuka",
+      "ramu",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Suket",
+    "slug": "umum-suket",
+    "className": "ci ci-umum-suket",
+    "file": "icons/umum/suket.webp",
+    "category": "Umum",
+    "keywords": [
+      "pramuka",
+      "suket",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Tata",
+    "slug": "umum-tata",
+    "className": "ci ci-umum-tata",
+    "file": "icons/umum/tata.webp",
+    "category": "Umum",
+    "keywords": [
+      "pramuka",
+      "tata",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Terap",
+    "slug": "umum-terap",
+    "className": "ci ci-umum-terap",
+    "file": "icons/umum/terap.webp",
+    "category": "Umum",
+    "keywords": [
+      "pramuka",
+      "terap",
+      "tkk",
+      "umum"
+    ]
+  },
+  {
+    "name": "Tkk",
+    "slug": "umum-tkk",
+    "className": "ci ci-umum-tkk",
+    "file": "icons/umum/tkk.webp",
+    "category": "Umum",
+    "keywords": [
       "pramuka",
       "tkk",
       "umum"
