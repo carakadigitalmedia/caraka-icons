@@ -1,34 +1,7 @@
-/*!
- * Caraka Icons
- * WebP + CSS icon library
- * Version: 1.0.0
- * License: MIT
- */
-.ci {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  flex: 0 0 auto;
-  vertical-align: -0.125em;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  line-height: 1;
-}
+/*! Caraka Icons — generated file; do not edit manually. */
+:root{--ci-icon-size:1em}
+.ci{display:inline-block;width:var(--ci-icon-size);height:var(--ci-icon-size);flex:0 0 auto;vertical-align:-.125em;background-repeat:no-repeat;background-position:center;background-size:contain;line-height:1}
+.ci-xs{--ci-icon-size:.75em}.ci-sm{--ci-icon-size:.875em}.ci-lg{--ci-icon-size:1.333em}.ci-xl{--ci-icon-size:1.75em}.ci-2x{--ci-icon-size:2em}.ci-3x{--ci-icon-size:3em}
+.ci-middle{vertical-align:middle}.ci-top{vertical-align:top}
 
-/* Tanda Kecakapan Khusus */
-.ci-tkk-berkemah {
-  background-image: url("./icons/tkk-berkemah.webp");
-}
-
-/* Optional size helpers; size follows current font size by default. */
-.ci-xs { font-size: .75em; }
-.ci-sm { font-size: .875em; }
-.ci-lg { font-size: 1.333em; }
-.ci-xl { font-size: 1.75em; }
-.ci-2x { font-size: 2em; }
-.ci-3x { font-size: 3em; }
-
-/* Alignment helpers */
-.ci-middle { vertical-align: middle; }
-.ci-top { vertical-align: top; }
+.ci-tkk-berkemah{background-image:url("./icons/tkk-berkemah.webp")}

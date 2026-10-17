@@ -1,251 +1,189 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#167346">
-  <meta name="description" content="Caraka Icons adalah library ikon WebP ringan dengan CSS untuk website, PHP, CodeIgniter, Bootstrap, dan HTML.">
-  <meta name="robots" content="index,follow">
-  <title>Caraka Icons — Katalog Ikon</title>
-  <link rel="icon" href="./icons/tkk-berkemah.webp" type="image/webp">
-  <link rel="stylesheet" href="./caraka-icons.css">
-  <style>
-    :root {
-      color-scheme: light;
-      --green: #167346;
-      --green-dark: #105b36;
-      --ink: #18231d;
-      --muted: #647067;
-      --line: #e0e8e2;
-      --bg: #f5f8f6;
-      --surface: #fff;
-      --soft: #f1f6f2;
-      --shadow: 0 8px 28px rgb(24 35 29 / 5%);
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    a { color: var(--green); }
-    button, input { font: inherit; }
-    button:focus-visible, input:focus-visible, a:focus-visible {
-      outline: 3px solid #80c99f;
-      outline-offset: 3px;
-    }
-    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
-    .hero {
-      color: #fff;
-      background: linear-gradient(135deg, #105b36, #23995c);
-      padding: clamp(30px, 6vw, 58px) 0 34px;
-    }
-    .brand { display: flex; align-items: center; gap: 14px; }
-    .brand-mark {
-      display: grid; place-items: center; flex: 0 0 58px; width: 58px; height: 58px;
-      border: 1px solid rgb(255 255 255 / 35%); border-radius: 16px;
-      background: rgb(255 255 255 / 12%);
-    }
-    .brand-mark .ci { width: 42px; height: 42px; }
-    h1 { margin: 0; font-size: clamp(29px, 5vw, 44px); line-height: 1.12; letter-spacing: -.035em; }
-    .hero p { max-width: 760px; margin: 14px 0 0; color: #e3f5e9; }
-    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .pill { display: inline-flex; align-items: center; border: 1px solid rgb(255 255 255 / 35%); border-radius: 999px; padding: 5px 10px; font-size: 12px; }
-    main { padding: 28px 0 48px; }
-    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-    h2 { margin: 0; font-size: clamp(21px, 3vw, 27px); line-height: 1.25; }
-    .section-heading p { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
-    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 18px; }
-    .search-wrap { position: relative; flex: 1 1 280px; }
-    .search-wrap label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-    input[type="search"] {
-      width: 100%; min-width: 0; border: 1px solid #cbd8ce; border-radius: 11px;
-      padding: 12px 14px; color: var(--ink); background: var(--surface);
-    }
-    input[type="search"]::placeholder { color: #78847b; }
-    .count { color: var(--muted); font-size: 14px; white-space: nowrap; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 15px; }
-    .card { min-width: 0; padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); box-shadow: var(--shadow); }
-    .preview {
-      display: flex; align-items: center; justify-content: center; height: 130px; overflow: hidden;
-      border: 1px solid #edf1ee; border-radius: 11px;
-      background-color: #fff;
-      background-image: linear-gradient(45deg, #f2f5f3 25%, transparent 25%), linear-gradient(-45deg, #f2f5f3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f2f5f3 75%), linear-gradient(-45deg, transparent 75%, #f2f5f3 75%);
-      background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0;
-    }
-    .preview .ci { display: inline-block; width: 100px; height: 100px; font-size: 100px; }
-    .name { margin: 14px 0 3px; font-size: 16px; font-weight: 750; }
-    .desc { min-height: 40px; margin: 0 0 12px; color: var(--muted); font-size: 13px; }
-    .classline { min-height: 38px; display: flex; align-items: center; padding: 8px 10px; margin-bottom: 10px; border: 1px solid #e8eee9; border-radius: 8px; background: var(--soft); }
-    code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
-    code { overflow-wrap: anywhere; font-size: 12px; }
-    .copy { width: 100%; min-height: 40px; border: 0; border-radius: 9px; padding: 9px 12px; background: var(--green); color: #fff; font-size: 14px; font-weight: 650; cursor: pointer; transition: background .15s ease; }
-    .copy:hover { background: var(--green-dark); }
-    .empty { display: none; padding: 36px 14px; text-align: center; color: var(--muted); border: 1px dashed #cbd8ce; border-radius: 12px; background: #fff; }
-    .notice { min-height: 24px; margin-top: 10px; color: var(--green); font-size: 13px; }
-    .docs { margin-top: 28px; padding: clamp(18px, 4vw, 26px); border: 1px solid var(--line); border-radius: 15px; background: var(--surface); box-shadow: var(--shadow); }
-    .docs h2 { font-size: 21px; }
-    .docs p { color: var(--muted); }
-    .docs pre { overflow: auto; margin: 12px 0; padding: 16px; border-radius: 10px; background: #17221b; color: #e5f4e9; font-size: 13px; line-height: 1.7; }
-    .docs pre code { font-size: inherit; white-space: pre; }
-    .copy-url { margin-top: 5px; }
-    .tip { padding: 12px 14px; border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; background: var(--soft); color: #35483b !important; font-size: 14px; }
-    footer { padding: 20px 0 30px; color: var(--muted); font-size: 13px; }
-    footer a { text-decoration: none; }
-    [hidden] { display: none !important; }
-    @media (max-width: 520px) {
-      .wrap { width: min(100% - 24px, 1120px); }
-      .hero { padding-top: 30px; }
-      .brand { align-items: flex-start; }
-      .brand-mark { flex-basis: 48px; width: 48px; height: 48px; border-radius: 13px; }
-      .brand-mark .ci { width: 36px; height: 36px; }
-      .toolbar { align-items: stretch; }
-      .count { padding-left: 2px; }
-      .card { padding: 13px; }
-      .preview { height: 118px; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11643b">
+<meta name="description" content="Caraka Icons — library ikon WebP ringan dengan class CSS otomatis, katalog responsif, dan pencarian cepat.">
+<title>Caraka Icons — Icon Library</title>
+<link rel="icon" href="./icons/tkk-berkemah.webp" type="image/webp">
+<link rel="stylesheet" href="./caraka-icons.css">
+<style>
+:root{color-scheme:light;--brand:#167346;--brand2:#105b36;--ink:#17231c;--muted:#66736a;--line:#e2e9e4;--surface:#fff;--bg:#f5f8f6;--soft:#edf5ef;--shadow:0 8px 28px #142a1b0a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select{font:inherit}
+button,a,input,select{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #85c99b;outline-offset:3px}
+.hero{background:radial-gradient(circle at 90% 0%,#ffffff20,transparent 34%),linear-gradient(135deg,#104d2f,#19804b 65%,#23995c);color:#fff;padding:clamp(28px,6vw,62px) 0 34px}
+.wrap{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+.topline{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.brandmark{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#ffffff1c;border:1px solid #ffffff36;font-size:24px;font-weight:800}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#d8f3e0;font-weight:700}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.06;letter-spacing:-.045em;margin:0 0 13px}
+.hero p{max-width:700px;color:#e4f5e9;margin:0;font-size:clamp(15px,2vw,18px)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pill{border:1px solid #ffffff45;background:#ffffff12;padding:5px 10px;border-radius:999px;font-size:12px}
+main{padding:26px 0 48px}
+.toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;margin-bottom:14px}
+.searchbox{position:relative}
+.searchbox span{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+input[type=search],select{width:100%;min-width:0;background:#fff;border:1px solid #ced9d1;border-radius:11px;padding:12px 13px;color:var(--ink)}
+input[type=search]{padding-left:40px}
+select{max-width:190px}
+.count{color:var(--muted);font-size:13px;white-space:nowrap}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:18px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:#3e5145;cursor:pointer;font-size:13px}
+.chip[aria-pressed=true]{background:var(--soft);border-color:#9bc9a9;color:#105b36;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,218px),1fr));gap:14px}
+.card{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:var(--shadow);transition:transform .16s ease,border-color .16s ease}
+.card:hover{transform:translateY(-2px);border-color:#bdd7c4}
+.preview{height:122px;display:grid;place-items:center;border-radius:11px;background-color:#f8faf8;background-image:linear-gradient(45deg,#edf2ee 25%,transparent 25%,transparent 75%,#edf2ee 75%),linear-gradient(45deg,#edf2ee 25%,#f8faf8 25%,#f8faf8 75%,#edf2ee 75%);background-size:16px 16px;background-position:0 0,8px 8px}
+.preview .ci{--ci-icon-size:80px}
+.card-head{display:flex;justify-content:space-between;align-items:start;gap:8px;margin-top:13px}
+.name{font-weight:750;overflow-wrap:anywhere}
+.category{font-size:11px;background:var(--soft);color:#22633c;border-radius:999px;padding:3px 7px;white-space:nowrap}
+.desc{color:var(--muted);font-size:12px;margin:3px 0 10px}
+.classline{background:#f3f7f4;border:1px solid #e7eee8;border-radius:8px;padding:8px 9px;margin-bottom:9px;min-height:36px}
+code{font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}
+.copy{width:100%;border:0;border-radius:9px;padding:10px 12px;background:var(--brand);color:#fff;font-weight:650;cursor:pointer}
+.copy:hover{background:var(--brand2)}
+.copy:active{transform:translateY(1px)}
+.state{display:none;padding:34px 12px;text-align:center;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:14px}
+.state strong{display:block;color:var(--ink);margin-bottom:5px}
+.notice{position:fixed;z-index:10;left:50%;bottom:20px;transform:translate(-50%,20px);opacity:0;pointer-events:none;max-width:calc(100% - 28px);padding:11px 16px;border-radius:12px;background:#17231c;color:#fff;box-shadow:0 10px 35px #0002;transition:opacity .18s ease,transform .18s ease}
+.notice.show{opacity:1;transform:translate(-50%,0)}
+.docs{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(16px,3vw,24px)}
+.docs h2{font-size:20px;margin:0 0 6px}
+.docs p{color:var(--muted);margin:8px 0}
+pre{white-space:pre;overflow:auto;background:#17231c;color:#e2f5e8;border-radius:11px;padding:15px;font-size:12px}
+.docgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+footer{padding:20px 0 30px;color:var(--muted);font-size:12px}
+footer a{color:var(--brand)}
+[hidden]{display:none!important}
+@media(max-width:680px){.toolbar{grid-template-columns:1fr auto}.searchbox{grid-column:1/-1}select{max-width:none}.count{grid-column:1/-1}.docgrid{grid-template-columns:1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,165px),1fr));gap:10px}.card{padding:11px}.preview{height:105px}.preview .ci{--ci-icon-size:68px}.classline code{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true"><span class="ci ci-tkk-berkemah"></span></div>
-        <div>
-          <h1>Caraka Icons</h1>
-          <p>Library ikon berbasis WebP + CSS yang ringan dan mudah digunakan di website, PHP, CodeIgniter, Bootstrap, maupun HTML biasa.</p>
-        </div>
-      </div>
-      <div class="pills" aria-label="Fitur library">
-        <span class="pill">WebP + CSS</span>
-        <span class="pill">Tanpa dependensi</span>
-        <span class="pill">GitHub Pages</span>
-      </div>
+<header class="hero">
+  <div class="wrap">
+    <div class="topline"><div class="brandmark" aria-hidden="true">C</div><div><div class="eyebrow">Caraka Digital Media</div><div style="font-weight:750">Icon Library</div></div></div>
+    <h1>Caraka Icons</h1>
+    <p>Library ikon WebP yang ringan, responsif, dan siap dipakai lintas proyek. Tambahkan gambar ke GitHub, class CSS dan katalog diperbarui otomatis.</p>
+    <div class="pills"><span class="pill">WebP + CSS</span><span class="pill">Auto-generated</span><span class="pill">GitHub Pages</span><span class="pill" id="heroCount">Memuat ikon…</span></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="toolbar">
+    <label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Cari ikon, nama, kata kunci, class…" aria-label="Cari ikon" autocomplete="off"></label>
+    <select id="sort" aria-label="Urutkan ikon"><option value="name">Nama A–Z</option><option value="name-desc">Nama Z–A</option><option value="category">Kategori</option></select>
+    <div class="count" id="count" aria-live="polite">Memuat…</div>
+  </div>
+  <div class="filters" id="filters" aria-label="Filter kategori"></div>
+  <section class="grid" id="grid" aria-label="Katalog ikon"></section>
+  <div class="state" id="empty"><strong>Tidak ada ikon yang cocok</strong>Coba kata kunci lain atau hapus filter kategori.</div>
+  <div class="state" id="loadError"><strong>Katalog belum bisa dimuat</strong>Pastikan GitHub Actions berhasil membuat file <code>icons.json</code>, lalu muat ulang halaman.</div>
+  <div class="notice" id="notice" role="status" aria-live="polite"></div>
+  <section class="docs">
+    <h2>Mulai menggunakan</h2>
+    <p>Pasang stylesheet satu kali di bagian <code>&lt;head&gt;</code> template utama. Tidak diperlukan JavaScript untuk menampilkan ikon di aplikasi.</p>
+    <pre><code>&lt;link rel="stylesheet" href="https://carakadigitalmedia.github.io/caraka-icons/caraka-icons.css"&gt;
+
+&lt;i class="ci ci-tkk-berkemah" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;i class="ci ci-tkk-berkemah ci-2x" aria-hidden="true"&gt;&lt;/i&gt;</code></pre>
+    <div class="docgrid">
+      <div><strong>Ukuran ikon</strong><p><code>ci-xs</code>, <code>ci-sm</code>, <code>ci-lg</code>, <code>ci-xl</code>, <code>ci-2x</code>, <code>ci-3x</code>. Ukuran mengikuti font jika helper ukuran tidak digunakan.</p></div>
+      <div><strong>Tambah ikon baru</strong><p>Upload file WebP ke folder <code>icons/</code>, commit, lalu tunggu workflow Actions selesai. Nama file menjadi class, misalnya <code>tkk-memasak.webp</code> → <code>ci ci-tkk-memasak</code>.</p></div>
     </div>
-  </header>
+  </section>
+</main>
+<footer class="wrap">© Caraka Icons · WebP + CSS · <a href="https://github.com/carakadigitalmedia/caraka-icons">Lihat repository</a></footer>
+<script>
+(() => {
+  "use strict";
+  const $ = id => document.getElementById(id);
+  const search = $("search"), sort = $("sort"), grid = $("grid"), filters = $("filters");
+  const count = $("count"), heroCount = $("heroCount"), empty = $("empty"), loadError = $("loadError"), notice = $("notice");
+  let icons = [], activeCategory = "Semua", noticeTimer;
 
-  <main class="wrap">
-    <section aria-labelledby="catalog-title">
-      <div class="section-heading">
-        <div>
-          <h2 id="catalog-title">Katalog ikon</h2>
-          <p>Cari ikon berdasarkan nama, kategori, atau class CSS.</p>
-        </div>
-      </div>
-
-      <div class="toolbar">
-        <div class="search-wrap">
-          <label for="search">Cari ikon</label>
-          <input id="search" type="search" placeholder="Contoh: berkemah, pramuka, ci-tkk…" autocomplete="off" spellcheck="false">
-        </div>
-        <span class="count" id="count" aria-live="polite">1 ikon</span>
-      </div>
-
-      <div class="grid" id="grid">
-        <article class="card" data-search="tkk berkemah camping kemah pramuka tanda kecakapan khusus ci-tkk-berkemah">
-          <div class="preview"><span class="ci ci-tkk-berkemah" role="img" aria-label="Lencana TKK Berkemah"></span></div>
-          <h3 class="name">TKK Berkemah</h3>
-          <p class="desc">Tanda Kecakapan Khusus · Pramuka</p>
-          <div class="classline"><code>ci ci-tkk-berkemah</code></div>
-          <button class="copy" type="button" data-copy="ci ci-tkk-berkemah">Salin class ikon</button>
-        </article>
-      </div>
-
-      <div class="empty" id="empty" role="status">Ikon tidak ditemukan. Coba kata kunci lain.</div>
-      <div class="notice" id="notice" role="status" aria-live="polite"></div>
-    </section>
-
-    <section class="docs" aria-labelledby="usage-title">
-      <h2 id="usage-title">Mulai menggunakan</h2>
-      <p>Tambahkan stylesheet Caraka Icons ke bagian <code>&lt;head&gt;</code> website Anda. Tidak perlu menyalin gambar ikon ke setiap proyek.</p>
-      <pre><code>&lt;link rel="stylesheet" href="https://carakadigitalmedia.github.io/caraka-icons/caraka-icons.css"&gt;</code></pre>
-      <p>Gunakan class ikon di HTML:</p>
-      <pre><code>&lt;i class="ci ci-tkk-berkemah" aria-label="TKK Berkemah"&gt;&lt;/i&gt;
-
-&lt;!-- Ukuran lebih besar --&gt;
-&lt;i class="ci ci-tkk-berkemah ci-2x" aria-label="TKK Berkemah"&gt;&lt;/i&gt;</code></pre>
-      <p class="tip">Ikon mengikuti ukuran font secara default. Gunakan <code>ci-xs</code>, <code>ci-sm</code>, <code>ci-lg</code>, <code>ci-xl</code>, <code>ci-2x</code>, atau <code>ci-3x</code> untuk mengubah ukuran.</p>
-      <h2 style="margin-top:22px">Contoh untuk CodeIgniter 3</h2>
-      <p>Pasang stylesheet satu kali di template utama, misalnya <code>application/views/templates/header.php</code>, lalu gunakan class ikon di view mana pun.</p>
-      <pre><code>&lt;link rel="stylesheet" href="https://carakadigitalmedia.github.io/caraka-icons/caraka-icons.css"&gt;
-
-&lt;a href="&lt;?= base_url('kegiatan'); ?&gt;" class="btn btn-success"&gt;
-  &lt;i class="ci ci-tkk-berkemah" aria-hidden="true"&gt;&lt;/i&gt;
-  Kegiatan Berkemah
-&lt;/a&gt;</code></pre>
-      <button class="copy copy-url" type="button" data-copy="https://carakadigitalmedia.github.io/caraka-icons/caraka-icons.css">Salin URL stylesheet</button>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    Caraka Icons · WebP + CSS · <a href="https://github.com/carakadigitalmedia/caraka-icons">Repository GitHub</a>
-  </footer>
-
-  <script>
-    (() => {
-      'use strict';
-      const search = document.getElementById('search');
-      const cards = Array.from(document.querySelectorAll('.card'));
-      const count = document.getElementById('count');
-      const empty = document.getElementById('empty');
-      const notice = document.getElementById('notice');
-      let noticeTimer;
-
-      function filterIcons() {
-        const term = search.value.trim().toLocaleLowerCase('id');
-        let visible = 0;
-        cards.forEach((card) => {
-          const searchable = (card.dataset.search + ' ' + card.textContent).toLocaleLowerCase('id');
-          const matches = searchable.includes(term);
-          card.hidden = !matches;
-          if (matches) visible += 1;
-        });
-        count.textContent = term ? `${visible} dari ${cards.length} ikon` : `${cards.length} ikon`;
-        empty.style.display = visible ? 'none' : 'block';
+  function announce(message) {
+    notice.textContent = message;
+    notice.classList.add("show");
+    clearTimeout(noticeTimer);
+    noticeTimer = setTimeout(() => notice.classList.remove("show"), 2600);
+  }
+  async function copyText(value) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(value);
+      } else {
+        const area = document.createElement("textarea");
+        area.value = value; area.readOnly = true;
+        Object.assign(area.style, {position:"fixed",left:"-9999px",top:"0",opacity:"0"});
+        document.body.append(area); area.select();
+        const ok = document.execCommand("copy"); area.remove();
+        if (!ok) throw new Error("copy failed");
       }
-
-      function showNotice(message) {
-        notice.textContent = message;
-        window.clearTimeout(noticeTimer);
-        noticeTimer = window.setTimeout(() => { notice.textContent = ''; }, 3500);
-      }
-
-      async function copyText(value) {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(value);
-          return true;
-        }
-        const area = document.createElement('textarea');
-        area.value = value;
-        area.setAttribute('readonly', '');
-        area.style.position = 'fixed';
-        area.style.left = '-9999px';
-        area.style.top = '0';
-        document.body.appendChild(area);
-        area.select();
-        let copied = false;
-        try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
-        area.remove();
-        return copied;
-      }
-
-      search.addEventListener('input', filterIcons);
-      document.querySelectorAll('[data-copy]').forEach((button) => {
-        button.addEventListener('click', async () => {
-          const value = button.dataset.copy || '';
-          try {
-            const copied = await copyText(value);
-            showNotice(copied ? `Berhasil disalin: ${value}` : `Silakan salin secara manual: ${value}`);
-          } catch (_) {
-            showNotice(`Silakan salin secara manual: ${value}`);
-          }
-        });
-      });
-      filterIcons();
-    })();
-  </script>
+      announce("Class disalin: " + value);
+    } catch (_) {
+      announce("Salin manual: " + value);
+    }
+  }
+  function renderFilters() {
+    const categories = ["Semua", ...new Set(icons.map(i => i.category || "Umum"))].sort((a,b) => a === "Semua" ? -1 : b === "Semua" ? 1 : a.localeCompare(b, "id"));
+    filters.replaceChildren();
+    categories.forEach(category => {
+      const button = document.createElement("button");
+      button.type = "button"; button.className = "chip";
+      button.textContent = category;
+      button.setAttribute("aria-pressed", String(category === activeCategory));
+      button.addEventListener("click", () => { activeCategory = category; renderFilters(); render(); });
+      filters.append(button);
+    });
+  }
+  function render() {
+    const term = search.value.trim().toLocaleLowerCase("id");
+    const list = icons.filter(icon => {
+      const haystack = [icon.name, icon.slug, icon.className, icon.category, ...(icon.keywords || [])].join(" ").toLocaleLowerCase("id");
+      return haystack.includes(term) && (activeCategory === "Semua" || (icon.category || "Umum") === activeCategory);
+    });
+    const sortValue = sort.value;
+    list.sort((a,b) => sortValue === "name-desc" ? b.name.localeCompare(a.name,"id") : sortValue === "category" ? (a.category || "").localeCompare(b.category || "","id") || a.name.localeCompare(b.name,"id") : a.name.localeCompare(b.name,"id"));
+    const fragment = document.createDocumentFragment();
+    list.forEach(icon => {
+      const article = document.createElement("article"); article.className = "card";
+      const preview = document.createElement("div"); preview.className = "preview";
+      const glyph = document.createElement("span"); glyph.className = icon.className; glyph.setAttribute("role","img"); glyph.setAttribute("aria-label",icon.name);
+      preview.append(glyph);
+      const head = document.createElement("div"); head.className = "card-head";
+      const name = document.createElement("div"); name.className = "name"; name.textContent = icon.name;
+      const category = document.createElement("span"); category.className = "category"; category.textContent = icon.category || "Umum";
+      head.append(name,category);
+      const desc = document.createElement("p"); desc.className = "desc"; desc.textContent = "Caraka Icons · WebP";
+      const classline = document.createElement("div"); classline.className = "classline";
+      const code = document.createElement("code"); code.textContent = icon.className; classline.append(code);
+      const button = document.createElement("button"); button.type = "button"; button.className = "copy"; button.textContent = "Salin class ikon";
+      button.addEventListener("click", () => copyText(icon.className));
+      article.append(preview,head,desc,classline,button); fragment.append(article);
+    });
+    grid.replaceChildren(fragment);
+    count.textContent = `${list.length} dari ${icons.length} ikon`;
+    empty.style.display = list.length ? "none" : "block";
+  }
+  search.addEventListener("input", render);
+  sort.addEventListener("change", render);
+  fetch("./icons.json", {cache:"no-cache"})
+    .then(response => { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
+    .then(data => {
+      if (!Array.isArray(data)) throw new Error("Manifest invalid");
+      icons = data;
+      heroCount.textContent = `${icons.length} ikon tersedia`;
+      renderFilters(); render();
+    })
+    .catch(() => { count.textContent = "Gagal memuat"; heroCount.textContent = "Katalog belum tersedia"; loadError.style.display = "block"; });
+})();
+</script>
 </body>
 </html>
