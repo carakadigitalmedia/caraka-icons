@@ -1,0 +1,34 @@
+/*!
+ * Caraka Icons
+ * WebP + CSS icon library
+ * Version: 1.0.0
+ * License: MIT
+ */
+.ci {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  vertical-align: -0.125em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  line-height: 1;
+}
+
+/* Tanda Kecakapan Khusus */
+.ci-tkk-berkemah {
+  background-image: url("./icons/tkk-berkemah.webp");
+}
+
+/* Optional size helpers; size follows current font size by default. */
+.ci-xs { font-size: .75em; }
+.ci-sm { font-size: .875em; }
+.ci-lg { font-size: 1.333em; }
+.ci-xl { font-size: 1.75em; }
+.ci-2x { font-size: 2em; }
+.ci-3x { font-size: 3em; }
+
+/* Alignment helpers */
+.ci-middle { vertical-align: middle; }
+.ci-top { vertical-align: top; }
