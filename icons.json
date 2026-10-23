@@ -13,6 +13,20 @@
     ]
   },
   {
+    "name": "Caraka Media",
+    "slug": "lainnya-caraka-media",
+    "className": "ci ci-lainnya-caraka-media",
+    "file": "icons/lainnya/caraka media.webp",
+    "category": "Lainnya",
+    "keywords": [
+      "caraka",
+      "lainnya",
+      "media",
+      "pramuka",
+      "tkk"
+    ]
+  },
+  {
     "name": "Laksana",
     "slug": "lainnya-laksana",
     "className": "ci ci-lainnya-laksana",
