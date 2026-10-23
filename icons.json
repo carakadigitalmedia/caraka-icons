@@ -13,13 +13,14 @@
     ]
   },
   {
-    "name": "Caraka Media",
-    "slug": "lainnya-caraka-media",
-    "className": "ci ci-lainnya-caraka-media",
-    "file": "icons/lainnya/caraka media.webp",
+    "name": "Caraka Digital Media",
+    "slug": "lainnya-caraka-digital-media",
+    "className": "ci ci-lainnya-caraka-digital-media",
+    "file": "icons/lainnya/caraka_digital_media.webp",
     "category": "Lainnya",
     "keywords": [
       "caraka",
+      "digital",
       "lainnya",
       "media",
       "pramuka",
