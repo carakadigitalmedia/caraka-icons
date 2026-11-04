@@ -41,6 +41,56 @@
     ]
   },
   {
+    "name": "Logo Duta Humas (13) (1)",
+    "slug": "lainnya-logo-duta-humas-13-1",
+    "className": "ci ci-lainnya-logo-duta-humas-13-1",
+    "file": "icons/lainnya/Logo Duta humas (13) (1).webp",
+    "category": "Lainnya",
+    "keywords": [
+      "(1)",
+      "(13)",
+      "1",
+      "13",
+      "duta",
+      "humas",
+      "lainnya",
+      "logo",
+      "pramuka",
+      "tkk"
+    ]
+  },
+  {
+    "name": "Logo Kwarda Jateng",
+    "slug": "lainnya-logo-kwarda-jateng",
+    "className": "ci ci-lainnya-logo-kwarda-jateng",
+    "file": "icons/lainnya/logo kwarda jateng.webp",
+    "category": "Lainnya",
+    "keywords": [
+      "jateng",
+      "kwarda",
+      "lainnya",
+      "logo",
+      "pramuka",
+      "tkk"
+    ]
+  },
+  {
+    "name": "Logo Trio (1)",
+    "slug": "lainnya-logo-trio-1",
+    "className": "ci ci-lainnya-logo-trio-1",
+    "file": "icons/lainnya/logo trio (1).webp",
+    "category": "Lainnya",
+    "keywords": [
+      "(1)",
+      "1",
+      "lainnya",
+      "logo",
+      "pramuka",
+      "tkk",
+      "trio"
+    ]
+  },
+  {
     "name": "No Image Main",
     "slug": "lainnya-no-image-main",
     "className": "ci ci-lainnya-no-image-main",
@@ -176,6 +226,48 @@
       "lainnya",
       "pramda",
       "pramuka",
+      "tkk"
+    ]
+  },
+  {
+    "name": "Pusdiklatacb Wijayakusuma",
+    "slug": "lainnya-pusdiklatacb-wijayakusuma",
+    "className": "ci ci-lainnya-pusdiklatacb-wijayakusuma",
+    "file": "icons/lainnya/pusdiklatacb wijayakusuma.webp",
+    "category": "Lainnya",
+    "keywords": [
+      "lainnya",
+      "pramuka",
+      "pusdiklatacb",
+      "tkk",
+      "wijayakusuma"
+    ]
+  },
+  {
+    "name": "Pusdiklatda Candrabirawa",
+    "slug": "lainnya-pusdiklatda-candrabirawa",
+    "className": "ci ci-lainnya-pusdiklatda-candrabirawa",
+    "file": "icons/lainnya/pusdiklatda candrabirawa.webp",
+    "category": "Lainnya",
+    "keywords": [
+      "candrabirawa",
+      "lainnya",
+      "pramuka",
+      "pusdiklatda",
+      "tkk"
+    ]
+  },
+  {
+    "name": "Pusdiklatnas Candradimuka",
+    "slug": "lainnya-pusdiklatnas-candradimuka",
+    "className": "ci ci-lainnya-pusdiklatnas-candradimuka",
+    "file": "icons/lainnya/pusdiklatnas candradimuka.webp",
+    "category": "Lainnya",
+    "keywords": [
+      "candradimuka",
+      "lainnya",
+      "pramuka",
+      "pusdiklatnas",
       "tkk"
     ]
   },
