@@ -13,6 +13,63 @@
     ]
   },
   {
+    "name": "Bidang Glossy 3D Central Java Emblem (1)",
+    "slug": "lainnya-bidang-glossy-3d-central-java-emblem-1",
+    "className": "ci ci-lainnya-bidang-glossy-3d-central-java-emblem-1",
+    "file": "icons/lainnya/bidang_Glossy 3D Central Java Emblem (1).webp",
+    "category": "Lainnya",
+    "keywords": [
+      "(1)",
+      "1",
+      "3d",
+      "bidang",
+      "central",
+      "emblem",
+      "glossy",
+      "java",
+      "lainnya",
+      "pramuka",
+      "tkk"
+    ]
+  },
+  {
+    "name": "Bidang Glossy 3D Scout Fleur De Lis Emblem",
+    "slug": "lainnya-bidang-glossy-3d-scout-fleur-de-lis-emblem",
+    "className": "ci ci-lainnya-bidang-glossy-3d-scout-fleur-de-lis-emblem",
+    "file": "icons/lainnya/bidang_Glossy 3D Scout Fleur-de-Lis Emblem.webp",
+    "category": "Lainnya",
+    "keywords": [
+      "3d",
+      "bidang",
+      "de",
+      "emblem",
+      "fleur",
+      "glossy",
+      "lainnya",
+      "lis",
+      "pramuka",
+      "scout",
+      "tkk"
+    ]
+  },
+  {
+    "name": "Bidang Glossy Jawa Tengah Emblem",
+    "slug": "lainnya-bidang-glossy-jawa-tengah-emblem",
+    "className": "ci ci-lainnya-bidang-glossy-jawa-tengah-emblem",
+    "file": "icons/lainnya/bidang_Glossy JAWA TENGAH Emblem.webp",
+    "category": "Lainnya",
+    "keywords": [
+      "bidang",
+      "emblem",
+      "glossy",
+      "jawa",
+      "lainnya",
+      "pramuka",
+      "tengah",
+      "tkk"
+    ]
+  },
+  {
     "name": "Caraka Digital Media",
     "slug": "lainnya-caraka-digital-media",
     "className": "ci ci-lainnya-caraka-digital-media",
